@@ -1,0 +1,12 @@
+Gene Name,Synonym,Association/Panel/Other,Total Exons,Coding Exons,Non-Coding Exons,mRNA RefSeq,JSI RefSeq Version,Inheritance Pattern,Comments
+XIAP,BIRC4,Stand Alone/HLH3,7,6,1,NM_001167,NM_001167.3,X-Link Recessive ,
+ELANE,ELA2,Stand Alone/SCN2/BMF4,5,5,0,NM_001972.2,NM_001972.3,AD,
+FASLG,,Stand Alone/ALPS2,4,4,0,NM_000639.1,NM_000639.2,AD; Rare AR ,Regulatory Mutations marked in Gene Information Sheet
+HAX1,HAX,Stand Alone/SCN2/BMF4,7,7,0,NM_006118.3,NM_006118.3,AR,
+FOXP3,IPEX,Stand Alone,12,11,1,NM_014009.3,NM_014009.3,XR,
+ITK,,Stand Alone/ALPS2/HLH3,17,17,0,NM_005546.3,NM_005546.3,AR ,
+UNC13D,MUNC13-4,Stand Alone/HLH3/Platelet/immuno Slice,32,32,0,NM_199242.2,NM_199242.2,AR ,
+PRF1,,Stand Alone/HLH3,3,2,1,NM_001083116.1 ( longer iso),NM_001083116.1,AR ,
+PACS1,,Custom,24,24,0,NM_018026.3,,,
+MYH9,,Custom/Platelet Slice,41,40,1,NM_002473.4,NM_002473.5,AD,
+DNAJC21,,Custom/SCN2/BMF4,12,12,0,NM_001012339.2,NM_001012339.2,,

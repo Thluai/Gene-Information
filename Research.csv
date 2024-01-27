@@ -1,0 +1,7 @@
+Gene,Synonym,Association,Total Exons,Coding Exons,Non-Coding Exons,mRNA RefSeq,Inheritance Pattern,Comments
+STAT3,APRF,Clinical Exome/ImmunoSeq,24,23,1,NM_139276.2,AD,
+NEB,,Clinical Exome,182,180,2,NM_001164507.1,AR,
+IFT140,,Clinical Exome,31,29,2,NM_014714.3,AR,
+EFCAB4B,CRACR2A,Clinical Exome,20,17,3,NM_001144958.1,,
+PSTPIP1,,Clinical Exome/ImmunoSeq,15,15,0,NM_003978.3,AD,
+NPC1,,Clinical Exome/Custom,25,25,0,NM_000271.4,,
