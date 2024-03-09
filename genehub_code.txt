@@ -1,0 +1,62 @@
+import mysql.connector
+from mysql.connector import errorcode
+import sys  # Import the sys module
+
+#This function enable users to execute a query that return results
+def select(conn,query): # takes in parameters connection object and query
+    cursor = conn.cursor() # Create a cursor object from the connection
+    cursor.execute(query) # execute selected query
+    results = [] # empty list to store the query result
+    for row in cursor.fetchall(): # access all the different rows in the cursor object
+        results.append(row)
+    cursor.close() # close the cursor to prevent memory leak
+    return results # return the result
+
+# this function also takes in connection and query parameters
+def execute(conn,query):
+    cursor = conn.cursor()
+    cursor.execute(query)
+    conn.commit() # Commit the chage to the database
+
+# This functin print every row    
+def show(rows):
+    for row in rows:
+        print(row)
+    
+# This function save the output in a text file    
+def save_to_text_file(rows, filename):
+    with open(filename, 'w') as file:
+        for row in rows:
+            file.write(','.join(map(str, row)) + '\n')
+            
+# Connect backend database using try and except structure 
+try: # connect to MySQL database using mysql.connector libraty
+    conn = mysql.connector.connect(
+        user="root", # username
+        password="", # passwrod
+        host="localhost", # host whre MySQL server is running
+        database="genehub") # database to connect
+    
+# If error occur, it prints the message "Cannot connect." and exits the program
+except mysql.connector.Error as err: 
+    print("Cannot connect.")
+    sys.exit()
+
+# Call the functions
+#print("Reference Information")
+#rows = select(conn,"select Gene_Name from ReferenceSequence where CodingExon >10") # select a record from a specific table
+#show(rows)
+
+#print("Inheritance Pattern")
+#rows = select(conn,"select Gene_Name from InheritancePattern_Gene where InheritancePattern_Name = 'AD'") # select a record from a specific table
+#show(rows)
+
+print("Insert a new gene")
+execute(conn,"insert into Gene values ('PTEN',' ','Active')")
+rows = select(conn,"select * from Gene")
+show(rows)
+
+# Save data to a text file 
+save_to_text_file(rows, 'GeneNameTest.txt')
+print("Data saved to 'GeneNameTest.txt' file.")
+
